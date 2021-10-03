@@ -34,7 +34,7 @@ export class Home extends Component {
             return(
                 <div key = {index}>
                     <Link to = {`/movie/${movie.id}`}>
-                        <img src = {`${imageUrl}${movie.poster_path}`} />
+                        <img src = {`${imageUrl}${movie.poster_path}`} alt="" />
                     </Link>
                 </div>
             )

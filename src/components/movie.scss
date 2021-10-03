@@ -4,14 +4,29 @@
     font-family: 'Poppins', sans-serif;
 }
 
-@mixin grid {
+@mixin grid($tempCol, $pad) {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 3rem;
+    grid-template-columns: $tempCol;
+    padding: $pad;
 }
 
+@mixin mQ($respond) {
+    @media (max-width: $respond){
+        @content;
+    }
+}
+
+
+
 .row{
-    @include grid()
+    @include grid (repeat(3,1fr), 3rem);
+        @include mQ (1000px){
+            @include grid (repeat(2,1fr), 3rem);
+        }
+
+        @include mQ (500px){
+            @include grid(1fr, 3rem);
+        }
 }
 
 img{
@@ -19,7 +34,9 @@ img{
     height: 400px;
     object-fit: cover;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+        @include mQ(500px){
+            width: 100%;
+        }
 }
 
 .container{
@@ -52,20 +69,4 @@ b{
     background-color: #444;
     color: #fff;
     padding: .2rem;
-}
-
-@media (max-width: 1000px){
-    .row{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 500px){
-    .row{
-        grid-template-columns: 1fr;
-    }
-
-    img{
-        width: 100%;
-    }
 }

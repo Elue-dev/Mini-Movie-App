@@ -20,27 +20,27 @@
 
 .row{
     @include grid (repeat(3,1fr), 3rem);
-        @include mQ (1000px){
+        @include mQ (63rem){
             @include grid (repeat(2,1fr), 3rem);
         }
 
-        @include mQ (500px){
+        @include mQ (32rem){
             @include grid(1fr, 3rem);
         }
 }
 
 img{
-    width: 300px;
-    height: 400px;
+    width: 19rem;
+    height: 25rem;
     object-fit: cover;
     margin-bottom: 2rem;
-        @include mQ(500px){
+        @include mQ(32rem){
             width: 100%;
         }
 }
 
 .container{
-    max-width: 1400px;
+    max-width: 88rem;
     margin: auto;
     width: 80%;
 }

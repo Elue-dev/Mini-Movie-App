@@ -11,7 +11,7 @@
   padding: 3rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 63rem) {
   .row {
     display: -ms-grid;
     display: grid;
@@ -21,7 +21,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 32rem) {
   .row {
     display: -ms-grid;
     display: grid;
@@ -32,21 +32,21 @@
 }
 
 img {
-  width: 300px;
-  height: 400px;
+  width: 19rem;
+  height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
   margin-bottom: 2rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 32rem) {
   img {
     width: 100%;
   }
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 88rem;
   margin: auto;
   width: 80%;
 }

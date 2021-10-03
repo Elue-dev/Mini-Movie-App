@@ -41,8 +41,11 @@ export class Home extends Component {
         })
         
         return (
-            <div className= "row">
-                {movieGrid}
+            <div>
+                <h3 style= {{padding: "1rem 0", color: "#222"}}>Click on any movie of choice to get full information of it</h3>
+                <div className= "row">
+                    {movieGrid}
+                </div>
             </div>
         )
     }

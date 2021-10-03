@@ -36,11 +36,14 @@ export class Movie extends Component {
         const imageUrl = `http://image.tmdb.org/t/p/w300${movie.poster_path}`
         return (
             <div className="container movie">
-                <img src= {imageUrl}></img>
-                <p><b>Title:</b> {movie.title}</p>
-                <p><b>Budget:</b>{movie.budget}</p>
-                <p><b>Tagline:</b> {movie.original_title}</p>
-                <p><b>Overview:</b> {movie.overview}</p>
+                <ul className="list group">
+                <li className="list-group-item"><img src= {imageUrl}/> </li>
+                    <li className="list-group-item"><p><b>Title:</b> {movie.title}</p> </li>
+                    <li className="list-group-item"><p><b>Budget:</b>{movie.budget}</p></li>
+                    <li className="list-group-item"><p><b>Tagline:</b> {movie.original_title}</p></li>
+                    <li className="list-group-item"><p><b>Overview:</b> {movie.overview}</p></li>
+                    <li className="list-group-item"><p><b>Release date:</b> {movie.release_date}</p></li>
+                </ul>
             </div>
         )
     }

@@ -19,7 +19,7 @@
 
 
 .row{
-    @include grid (repeat(3,1fr), 3rem);
+    @include grid (repeat(3,1fr), 3rem 9rem);
         @include mQ (63rem){
             @include grid (repeat(2,1fr), 3rem);
         }

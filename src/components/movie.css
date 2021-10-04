@@ -8,7 +8,7 @@
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  padding: 3rem;
+  padding: 3rem 9rem;
 }
 
 @media (max-width: 63rem) {
